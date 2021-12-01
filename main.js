@@ -60,3 +60,23 @@ imprimir();
 
 var nombres = ['victor' , 'Annie', 'Joaquin'];
 alert(nombres[2]);
+
+
+
+document.write('<h1>Listado de NOMBRES: </h1>');
+
+for( i = 0; i<nombres.length; i++){
+    document.write(nombres[i] + '<br/>');
+}
+
+document.write('<hr>'+'<br/>');
+
+
+nombres.forEach(function(nombre){
+    document.write(nombre + '<br/>');
+});
+document.write('<hr>'+'<br/>');
+
+nombres.forEach((nombre) =>{
+    document.write(nombre + '<br/>');
+});
