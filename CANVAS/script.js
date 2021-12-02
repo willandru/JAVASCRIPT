@@ -19,13 +19,32 @@ ctx.fillRect(10,10,50,50);
 //DRAWING A CIRCLE
 
 
+const mouse ={
+    x: null,
+    y: null,
+}
 
-ctx.fillStyle = 'red';
+canvas.addEventListener('click', function(event){
+    mouse.x= event.x;
+    mouse.y= event.y;
+    drawCircle();
+});
 
+
+function drawCircle(){
+    ctx.fillStyle = 'red';
+    ctx.beginPath();
+    ctx.arc(mouse.x,mouse.y,50,0, Math.PI*2);
+    ctx.fill();
+
+}
+
+
+/* ctx.fillStyle = 'red';
 ctx.strokeStyle='red';
 ctx.lineWidth=5;
 ctx.beginPath();
 ctx.arc(100,100,50,0, Math.PI*2);
 ctx.fill();
-ctx.stroke();
+ctx.stroke(); */
 
